@@ -14,7 +14,7 @@ pipeline {
 		stage('Production'){
 			steps {
 				
-				if sudo docker ps | grep production_server
+				if (sudo docker ps | grep production_server)
 				then
 				echo "Production server already running"
 				else
